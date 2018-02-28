@@ -1,0 +1,34 @@
+<idea-plugin>
+  <id>com.mikhail.pravilov.mit.JavaStatistic</id>
+  <name>Java statistic</name>
+  <version>1.0</version>
+  <vendor email="prav.mischa@gmail.com" url="">Mikhail Pravilov</vendor>
+
+  <description><![CDATA[
+      Plugin that gathers information about java classes, fields and methods in project.
+    ]]></description>
+
+  <change-notes><![CDATA[
+     ]]>
+  </change-notes>
+
+  <!-- please see http://www.jetbrains.org/intellij/sdk/docs/basics/getting_started/build_number_ranges.html for description -->
+  <idea-version since-build="145.0"/>
+
+  <!-- please see http://www.jetbrains.org/intellij/sdk/docs/basics/getting_started/plugin_compatibility.html
+       on how to target different products -->
+  <depends>com.intellij.modules.lang</depends>
+
+  <extensions defaultExtensionNs="com.intellij">
+    <!-- Add your extensions here -->
+  </extensions>
+
+  <actions>
+    <!-- Add your actions here -->
+    <action id="com.mikhail.pravilov.mit.statistic.StatisticAction" class="com.mikhail.pravilov.mit.statistic.StatisticAction"
+            text="Java Statistic" description="Action that gathers statistic information about java classes">
+      <add-to-group group-id="AnalyzeMenu" anchor="first"/>
+    </action>
+  </actions>
+
+</idea-plugin>
